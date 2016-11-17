@@ -14,12 +14,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-280,-228">
         <ListView x:Name="listView" HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" VerticalAlignment="Top" Width="1087" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,214,0,0" TextWrapping="Wrap" Text="{Binding SelectedFilm}" VerticalAlignment="Top" Height="141" Width="563" SelectionChanged="textBlock_SelectionChanged" Foreground="#FF141010"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="29" Margin="858,355,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.description, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="858,392,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.rating, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="858,429,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.releaseDato, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="858,466,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.sal, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="858,320,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.pris, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Margin="858,285,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.filmNavn, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="79,211,0,0" TextWrapping="Wrap" Text="{Binding SelectedFilm}" VerticalAlignment="Top" Height="141" Width="563" SelectionChanged="textBlock_SelectionChanged" Foreground="#FF141010"/>
+        <TextBox x:Name="filmdescription" HorizontalAlignment="Left" Height="29" Margin="858,355,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.description, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="filmrating" HorizontalAlignment="Left" Margin="858,392,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.rating, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="filmrelease" HorizontalAlignment="Left" Margin="858,429,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.releaseDato, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="filmsal" HorizontalAlignment="Left" Margin="858,466,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.sal, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="filmpris" HorizontalAlignment="Left" Height="30" Margin="858,320,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.pris, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="filmnavn" HorizontalAlignment="Left" Margin="858,285,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.filmNavn, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
     </Grid>
 </Page>
