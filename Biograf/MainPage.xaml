@@ -21,5 +21,11 @@
         <TextBox x:Name="filmsal" HorizontalAlignment="Left" Margin="858,466,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.sal, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
         <TextBox x:Name="filmpris" HorizontalAlignment="Left" Height="30" Margin="858,320,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.pris, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
         <TextBox x:Name="filmnavn" HorizontalAlignment="Left" Margin="858,285,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.filmNavn, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="805,285,0,0" TextWrapping="Wrap" Text="Titel:" VerticalAlignment="Top" Height="37" Width="48"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="810,327,0,0" TextWrapping="Wrap" Text="Pris:" VerticalAlignment="Top" Height="37" Width="48"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="761,364,0,0" TextWrapping="Wrap" Text="Beskrivelse:" VerticalAlignment="Top" Height="37" Width="92"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="728,429,0,0" TextWrapping="Wrap" Text="Udgivelses Dato:" VerticalAlignment="Top" Height="37" Width="125"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="761,392,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Height="37" Width="97"/>
+        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="805,466,0,0" TextWrapping="Wrap" Text="Sal:" VerticalAlignment="Top" Height="37" Width="48"/>
     </Grid>
 </Page>
