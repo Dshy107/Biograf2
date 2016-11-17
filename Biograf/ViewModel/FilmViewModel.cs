@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace Biograf.ViewModel
 {
-    public class FilmViewModel 
+    public class FilmViewModel : INotifyPropertyChanged
     {
         public Model.FilmList Filmliste { get; set; }
         private Model.FilmNavn selectedFilm;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public Model.FilmNavn SelectedFilm
         {
