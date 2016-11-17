@@ -21,8 +21,9 @@ namespace Biograf.ViewModel
                 selectedFilm = value;
                 OnPropertyChanged(nameof(SelectedFilm));
                 }
-
         }
+
+        public Model.FilmNavn NewFilm { get; set; }
 
 
         public FilmViewModel()
