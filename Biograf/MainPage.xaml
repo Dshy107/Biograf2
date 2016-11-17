@@ -13,8 +13,8 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-280,-228">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" VerticalAlignment="Top" Width="1087" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="79,211,0,0" TextWrapping="Wrap" Text="{Binding SelectedFilm}" VerticalAlignment="Top" Height="141" Width="563" SelectionChanged="textBlock_SelectionChanged" Foreground="#FF141010"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="140" Margin="0,10,0,0" VerticalAlignment="Top" Width="1097" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,211,0,0" TextWrapping="Wrap" Text="{Binding SelectedFilm}" VerticalAlignment="Top" Height="141" Width="632" SelectionChanged="textBlock_SelectionChanged" Foreground="#FF141010"/>
         <TextBox x:Name="filmdescription" HorizontalAlignment="Left" Height="29" Margin="858,355,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.description, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
         <TextBox x:Name="filmrating" HorizontalAlignment="Left" Margin="858,392,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.rating, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
         <TextBox x:Name="filmrelease" HorizontalAlignment="Left" Margin="858,429,0,0" TextWrapping="Wrap" Text="{Binding NewFilm.releaseDato, Mode=TwoWay}" VerticalAlignment="Top" Width="167"/>
@@ -24,8 +24,10 @@
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="805,285,0,0" TextWrapping="Wrap" Text="Titel:" VerticalAlignment="Top" Height="37" Width="48"/>
         <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="810,327,0,0" TextWrapping="Wrap" Text="Pris:" VerticalAlignment="Top" Height="37" Width="48"/>
         <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="761,364,0,0" TextWrapping="Wrap" Text="Beskrivelse:" VerticalAlignment="Top" Height="37" Width="92"/>
-        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="728,429,0,0" TextWrapping="Wrap" Text="Udgivelses Dato:" VerticalAlignment="Top" Height="37" Width="125"/>
-        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="761,392,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Height="37" Width="97"/>
-        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="805,466,0,0" TextWrapping="Wrap" Text="Sal:" VerticalAlignment="Top" Height="37" Width="48"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="724,429,0,0" TextWrapping="Wrap" Text="Udgivelses Dato:" VerticalAlignment="Top" Height="37" Width="129"/>
+        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="790,392,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Height="37" Width="68"/>
+        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="810,466,0,0" TextWrapping="Wrap" Text="Sal:" VerticalAlignment="Top" Height="37" Width="43"/>
+        <Button x:Name="button_Copy" Content="Add" HorizontalAlignment="Left" Margin="858,565,0,0" VerticalAlignment="Top" Height="31" Width="167"/>
+        <Button x:Name="button_Copy1" Content="Remove" HorizontalAlignment="Left" Margin="858,601,0,0" VerticalAlignment="Top" Height="31" Width="167"/>
     </Grid>
 </Page>
