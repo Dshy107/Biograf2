@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace Biograf.ViewModel
 {
-    public class FilmViewModel : INotifyPropertyChanged
+    public class FilmViewModel : INotifyPropertyChanged //side 660-661
     {
         public Model.FilmList Filmliste { get; set; }
         private Model.FilmNavn selectedFilm;
@@ -17,7 +17,11 @@ namespace Biograf.ViewModel
         public Model.FilmNavn SelectedFilm
         {
             get { return selectedFilm; }
-            set { selectedFilm = value; }
+            set {
+                selectedFilm = value;
+                OnPropertyChanged(nameof(SelectedFilm));
+                }
+
         }
 
 
@@ -25,6 +29,14 @@ namespace Biograf.ViewModel
         {
             Filmliste = new Model.FilmList();
             selectedFilm = new Model.FilmNavn();
+        }
+
+        protected virtual void OnPropertyChanged(string PropertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
+            }
         }
     }
 }
