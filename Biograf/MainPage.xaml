@@ -12,7 +12,8 @@
         <ViewModel:FilmViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-280,0">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="293" Margin="10,10,0,0" VerticalAlignment="Top" Width="1087" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-280,-228">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="140" Margin="10,10,0,0" VerticalAlignment="Top" Width="1087" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,214,0,0" TextWrapping="Wrap" Text="{Binding SelectedFilm}" VerticalAlignment="Top" Height="141" Width="563" SelectionChanged="textBlock_SelectionChanged" Foreground="#FF141010"/>
     </Grid>
 </Page>

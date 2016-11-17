@@ -31,5 +31,10 @@ namespace Biograf
         {
 
         }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
