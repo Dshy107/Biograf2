@@ -1,0 +1,18 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Biograf"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:Biograf.ViewModel"
+    x:Class="Biograf.MainPage"
+    mc:Ignorable="d" Width="934">
+
+    <Page.DataContext>
+        <ViewModel:FilmViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-280,0">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="293" Margin="10,10,0,0" VerticalAlignment="Top" Width="1087" SelectionChanged="listView_SelectionChanged" ItemsSource="{Binding Filmliste}" SelectedItem="{Binding SelectedFilm, Mode=TwoWay}"/>
+    </Grid>
+</Page>
