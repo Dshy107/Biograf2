@@ -11,7 +11,7 @@ namespace Biograf.ViewModel
     {
         public Model.FilmList Filmliste { get; set; }
         private Model.FilmNavn selectedFilm;
-        public RelayCommand AddFilmCommand { get; set; }
+        //public RelayCommand AddFilmCommand { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -24,6 +24,7 @@ namespace Biograf.ViewModel
                 }
         }
 
+
         public Model.FilmNavn NewFilm { get; set; }
 
 
@@ -31,7 +32,9 @@ namespace Biograf.ViewModel
         {
             Filmliste = new Model.FilmList();
             selectedFilm = new Model.FilmNavn();
-            AddFilmCommand = new RelayCommand(AddNewFilm, null);
+            AddFilmCommand = new AddFilmCommand(AddNewFilm);
+            NewFilm = new Model.FilmNavn();
+            //AddFilmCommand = new RelayCommand(AddNewFilm, null);
         }
 
         protected virtual void OnPropertyChanged(string PropertyName)
@@ -41,6 +44,8 @@ namespace Biograf.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
             }
         }
+        public AddFilmCommand AddFilmCommand { get; set; }
+
 
         public void AddNewFilm()
         {
