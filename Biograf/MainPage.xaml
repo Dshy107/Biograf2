@@ -28,6 +28,6 @@
         <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="790,392,0,0" TextWrapping="Wrap" Text="Rating:" VerticalAlignment="Top" Height="37" Width="68"/>
         <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="810,466,0,0" TextWrapping="Wrap" Text="Sal:" VerticalAlignment="Top" Height="37" Width="43"/>
         <Button x:Name="button_Copy" Content="Add" HorizontalAlignment="Left" Margin="858,565,0,0" VerticalAlignment="Top" Height="31" Width="167" Command="{Binding AddFilmCommand}"/>
-        <Button x:Name="button_Copy1" Content="Remove" HorizontalAlignment="Left" Margin="858,601,0,0" VerticalAlignment="Top" Height="31" Width="167"/>
+        <Button x:Name="button_Copy1" Content="Remove" HorizontalAlignment="Left" Margin="858,601,0,0" VerticalAlignment="Top" Height="31" Width="167" Command="{Binding RemoveFilmCommand}"/>
     </Grid>
 </Page>

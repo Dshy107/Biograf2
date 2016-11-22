@@ -33,6 +33,7 @@ namespace Biograf.ViewModel
             Filmliste = new Model.FilmList();
             selectedFilm = new Model.FilmNavn();
             AddFilmCommand = new AddFilmCommand(AddNewFilm);
+            RemoveFilmCommand = new RemoveFilmCommand(RemoveFilm);
             NewFilm = new Model.FilmNavn();
             //AddFilmCommand = new RelayCommand(AddNewFilm, null);
         }
@@ -45,11 +46,16 @@ namespace Biograf.ViewModel
             }
         }
         public AddFilmCommand AddFilmCommand { get; set; }
+        public RemoveFilmCommand RemoveFilmCommand { get; set; }
 
 
         public void AddNewFilm()
         {
             Filmliste.Add(NewFilm);
+        }
+        public void RemoveFilm()
+        {
+            Filmliste.Remove(NewFilm);
         }
     }
 }
