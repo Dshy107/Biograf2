@@ -45,6 +45,7 @@ namespace Biograf.ViewModel
             NewFilm = new Model.FilmNavn();
             //AddFilmCommand = new RelayCommand(AddNewFilm, null);
             localfolder = ApplicationData.Current.LocalFolder;
+
         }
         public AddFilmCommand AddFilmCommand { get; set; }
         public RemoveFilmCommand RemoveFilmCommand { get; set; }
@@ -53,12 +54,21 @@ namespace Biograf.ViewModel
 
         public async void HentDataFraDiskAsync()
         {
-            this.Filmliste.Clear();
+            try
+            {
+                StorageFile file = await localfolder.GetFileAsync(filNavn);
+                string jsonText = await FileIO.ReadTextAsync(file);
+                this.Filmliste.Clear();
+                Filmliste.IndsetJson(jsonText);
+            }
+            catch (Exception)
+            {
+               
+                //throw;
+            }
+            
 
-            StorageFile file = await localfolder.GetFileAsync(filNavn);
-            string jsonText = await FileIO.ReadTextAsync(file);
-
-            Filmliste.IndsetJson(jsonText);
+           
 
         }
         /// <summary>
