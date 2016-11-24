@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using Newtonsoft.Json;
+using Biograf.Model;
+using Windows.Storage;
 
 namespace Biograf.ViewModel
 {
@@ -27,15 +30,34 @@ namespace Biograf.ViewModel
 
         public Model.FilmNavn NewFilm { get; set; }
 
+        StorageFolder localfolder = null;
+
+        private readonly string filNavn = "JsonText.json";
 
         public FilmViewModel()
         {
             Filmliste = new Model.FilmList();
             selectedFilm = new Model.FilmNavn();
             AddFilmCommand = new AddFilmCommand(AddNewFilm);
+            SaveFilmCommand = new SaveFilmCommand(GemDataTilDiskAsync);
             RemoveFilmCommand = new RemoveFilmCommand(RemoveFilm);
             NewFilm = new Model.FilmNavn();
             //AddFilmCommand = new RelayCommand(AddNewFilm, null);
+            localfolder = ApplicationData.Current.LocalFolder;
+        }
+        public AddFilmCommand AddFilmCommand { get; set; }
+        public RemoveFilmCommand RemoveFilmCommand { get; set; }
+        public SaveFilmCommand SaveFilmCommand { get; set; }
+        /// <summary>
+        /// Gemmer json data fra liste i localfolder
+        /// </summary>
+        public async void GemDataTilDiskAsync()
+        {
+
+            string jsonText = this.Filmliste.GetJson();
+            StorageFile file = await localfolder.CreateFileAsync(filNavn, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(file, jsonText);
+
         }
 
         protected virtual void OnPropertyChanged(string PropertyName)
@@ -45,8 +67,14 @@ namespace Biograf.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(PropertyName));
             }
         }
-        public AddFilmCommand AddFilmCommand { get; set; }
-        public RemoveFilmCommand RemoveFilmCommand { get; set; }
+
+
+        public string GetFilmlisteJson()
+        {
+            string jsonText = JsonConvert.SerializeObject(Filmliste);
+            return jsonText;
+               
+        }
 
 
         public void AddNewFilm()
@@ -57,5 +85,6 @@ namespace Biograf.ViewModel
         {
             Filmliste.Remove(NewFilm);
         }
+     
     }
 }

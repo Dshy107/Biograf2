@@ -105,6 +105,8 @@
     <Compile Include="ViewModel\AddFilmCommand.cs" />
     <Compile Include="ViewModel\FilmViewModel.cs" />
     <Compile Include="ViewModel\RemoveFilmCommand.cs" />
+    <Compile Include="ViewModel\SaveFilmCommand.cs" />
+    <Compile Include="ViewModel\ViewModel1.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
