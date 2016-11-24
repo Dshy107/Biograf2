@@ -53,6 +53,12 @@ namespace Biograf.ViewModel
 
         public async void HentDataFraDiskAsync()
         {
+            this.Filmliste.Clear();
+
+            StorageFile file = await localfolder.GetFileAsync(filNavn);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+            Filmliste.IndsetJson(jsonText);
 
         }
         /// <summary>

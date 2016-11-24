@@ -26,6 +26,10 @@ namespace Biograf.Model
             string json = JsonConvert.SerializeObject(this);
             return json;
         }
+        /// <summary>
+        /// Metode som modtager en string af json og deserialiserer til objekt
+        /// </summary>
+        /// <param name="jsonText"></param>
         public void IndsetJson(string jsonText)
         {
             List<FilmNavn> nyListe = JsonConvert.DeserializeObject<List<FilmNavn>>(jsonText);
