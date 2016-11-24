@@ -41,6 +41,7 @@ namespace Biograf.ViewModel
             AddFilmCommand = new AddFilmCommand(AddNewFilm);
             SaveFilmCommand = new SaveFilmCommand(GemDataTilDiskAsync);
             RemoveFilmCommand = new RemoveFilmCommand(RemoveFilm);
+            HentFilmCommand = new HentFilmCommand(HentDataFraDiskAsync);
             NewFilm = new Model.FilmNavn();
             //AddFilmCommand = new RelayCommand(AddNewFilm, null);
             localfolder = ApplicationData.Current.LocalFolder;
@@ -48,6 +49,12 @@ namespace Biograf.ViewModel
         public AddFilmCommand AddFilmCommand { get; set; }
         public RemoveFilmCommand RemoveFilmCommand { get; set; }
         public SaveFilmCommand SaveFilmCommand { get; set; }
+        public HentFilmCommand HentFilmCommand { get; set; }
+
+        public async void HentDataFraDiskAsync()
+        {
+
+        }
         /// <summary>
         /// Gemmer json data fra liste i localfolder
         /// </summary>

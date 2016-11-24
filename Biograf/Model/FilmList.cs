@@ -26,5 +26,14 @@ namespace Biograf.Model
             string json = JsonConvert.SerializeObject(this);
             return json;
         }
+        public void IndsetJson(string jsonText)
+        {
+            List<FilmNavn> nyListe = JsonConvert.DeserializeObject<List<FilmNavn>>(jsonText);
+
+            foreach (var film in nyListe)
+            {
+                this.Add(film);
+            }
+        }
     }
 }

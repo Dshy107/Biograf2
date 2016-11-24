@@ -30,5 +30,6 @@
         <Button x:Name="button_Copy" Content="Add" HorizontalAlignment="Left" Margin="858,565,0,0" VerticalAlignment="Top" Height="31" Width="167" Command="{Binding AddFilmCommand}"/>
         <Button x:Name="button_Copy1" Content="Remove" HorizontalAlignment="Left" Margin="858,601,0,0" VerticalAlignment="Top" Height="31" Width="167" Command="{Binding RemoveFilmCommand}"/>
         <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="858,637,0,0" VerticalAlignment="Top" Width="167" Command="{Binding SaveFilmCommand}"/>
+        <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="858,674,0,0" VerticalAlignment="Top" Width="167" Command="{Binding HentFilmCommand}"/>
     </Grid>
 </Page>
