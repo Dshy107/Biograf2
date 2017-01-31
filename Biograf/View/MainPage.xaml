@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:Biograf.ViewModel"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="Biograf.MainPage"
     mc:Ignorable="d" Width="934">
 
@@ -31,5 +32,13 @@
         <Button x:Name="button_Copy1" Content="Remove" HorizontalAlignment="Left" Margin="858,601,0,0" VerticalAlignment="Top" Height="31" Width="167" Command="{Binding RemoveFilmCommand}"/>
         <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="858,637,0,0" VerticalAlignment="Top" Width="167" Command="{Binding SaveFilmCommand}"/>
         <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="858,674,0,0" VerticalAlignment="Top" Width="167" Command="{Binding HentFilmCommand}"/>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="958,711,0,0" VerticalAlignment="Top">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="Biograf.View.BlankPage1"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="858,503,0,0" VerticalAlignment="Top" Width="120" IsDropDownOpen="{Binding NewFilm.filmNavn}"/>
     </Grid>
 </Page>

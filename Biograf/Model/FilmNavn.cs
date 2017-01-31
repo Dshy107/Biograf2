@@ -15,12 +15,15 @@ namespace Biograf.Model
         public bool treDtoD { get; set; }
         public string sal { get; set; }
         public int rating { get; set; }
+        public string Genre { get; set; }
+
+        
 
 
         public override string ToString()
         {
             return "Titel: " + filmNavn + ", " + "Pris: " + pris + ", " + "I biografen: " + releaseDato + ", " + "Beskrivelse: " + description + ", " + sal + ", " + "Rating: " + rating;
         }
-
+        
     }
 }
